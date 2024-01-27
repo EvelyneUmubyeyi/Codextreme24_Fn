@@ -1,8 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Navbar from "../components/navbar";
+import { useRouter } from 'next/router';
 
 export default function Projects() {
+  const router = useRouter();
+
   const [popupVisible, setPopupVisible] = useState(false);
   const [optionsVisible, setOptionsVisible] = useState(false);
+  const [status, setStatus] = useState('');
+  const [buttonText, setButtonText] = useState('Request a Demo');
+
+  const setStatusFn = () =>{
+    let status = localStorage.getItem('status')
+    setStatus(status);
+    if (status === 'Demo booked') {
+      setButtonText('View Status')
+    }
+  }
+
+  useEffect(() => {
+    setStatusFn();
+  }, []); 
 
   // Function to toggle the visibility of the popup
   const togglePopup = () => {
@@ -15,9 +33,14 @@ export default function Projects() {
     setOptionsVisible(!optionsVisible);
   };
 
+  const handleViewProject = () => {
+    router.push('/projectDetails');
+  };
+
   return (
     <div class="w-full h-full m-auto">
-      <div class="flex w-full h-full justify-center py-4 my-8">
+      <Navbar/>
+      <div class="flex w-full h-full justify-center py-4 mb-8 mt-20">
         <p class="block text-2xl font-bold text-gray-800 sm:text-3xl">
           Get any <span className="text-blue-600">project</span> from our rich{" "}
           <span className="text-blue-600">pool</span>
@@ -133,7 +156,7 @@ export default function Projects() {
           </div>}
         </div>
       </div>
-      <div class="w-[80%] flex justify-center m-auto">
+      <div class="w-[80%] flex justify-center m-auto cursor-pointer" onClick={handleViewProject}>
         <div class="bg-white border rounded-xl shadow-sm sm:flex w-full h-[280px]">
           <div class=" relative w-[40%] rounded-t-xl overflow-hidden pt-[40%] sm:rounded-s-xl md:rounded-se-none">
             <img
@@ -187,9 +210,9 @@ export default function Projects() {
               </div>
               <a
                 class="w-fit mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="#"
+                href="/bookdemo"
               >
-                Request a demo
+                {buttonText}
               </a>
             </div>
           </div>
