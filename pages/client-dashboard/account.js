@@ -43,7 +43,7 @@ export default function DashboardTemp() {
                 <path
                   d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke-linecap="round"
                 />
               </svg>
@@ -91,7 +91,7 @@ export default function DashboardTemp() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
@@ -232,7 +232,7 @@ export default function DashboardTemp() {
           <div class="w-[25%] h-full  flex flex-col items-start justify-start  p-4">
             <div className="w-[90%]  h-[200px] overflow-hidden rounded-full">
               <img
-                src="https://th.bing.com/th/id/OIP.FFAGaoX_NnQlXOE3cR46nQHaFj?rs=1&pid=ImgDetMain"
+                src="https://64.media.tumblr.com/7331186002b700ca5d807ea8eb5bb0e5/e57302c5207a9101-f2/s1280x1920/75e7691622fda44dd4597c709ebcf7649cdfbe37.jpg"
                 alt="developer"
                 className="w-full h-full object-cover"
               />
@@ -246,7 +246,7 @@ export default function DashboardTemp() {
             <div class="flex flex-col gap-y-2 mb-6">
               <div>
                 <p class="text-black-bold">Location:</p>
-                <p class="text-gray-400">Kigali, Rwanda</p>
+                <p class="text-gray-400">Miami, Florida</p>
               </div>
                
             </div>
