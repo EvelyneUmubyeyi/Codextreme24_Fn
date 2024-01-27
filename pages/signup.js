@@ -138,7 +138,7 @@ export default function Signup() {
                     <div>
                       <div class="flex justify-between items-center">
                         <label for="password" class="block text-sm mb-2 ">
-                          Password
+                          Confirm Password
                         </label>
                         <a
                           class="text-sm text-blue-600 decoration-2 hover:underline font-medium "

@@ -301,7 +301,7 @@ export default function AddProject() {
               <div className="relative h-40 rounded-t-xl bg-[url('https://preline.co/assets/svg/examples/abstract-bg-1.svg')] bg-no-repeat bg-cover bg-center">
                 <div className="absolute top-0 end-0 p-4">
                   <label
-                    htmlFor="imageUpload"
+                    // htmlFor="imageUpload"
                     className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
                   >
                     <svg
@@ -376,7 +376,7 @@ export default function AddProject() {
                   </div>
                   <div className="space-y-2">
                     <label
-                      htmlFor="af-submit-app-category"
+                      // htmlFor="af-submit-app-category"
                       className="inline-block text-sm font-medium text-gray-800 mt-2.5"
                     >
                       Category
