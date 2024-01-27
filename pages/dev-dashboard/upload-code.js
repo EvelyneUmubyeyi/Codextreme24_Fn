@@ -1,6 +1,64 @@
 import React, { useState } from "react";
 
-export default function DashboardTemp() {
+export default function DashboardTransactions() {
+  const handleDownload = () => {
+    // Create a sample text file content
+    const fileContent = "Hello, this is a downloadable file!";
+
+    // Create a Blob with the file content
+    const blob = new Blob([fileContent], { type: "text/plain" });
+
+    // Create a download link
+    const downloadLink = document.createElement("a");
+    downloadLink.href = URL.createObjectURL(blob);
+
+    // Set the file name
+    downloadLink.download = "project.zip";
+
+    // Append the link to the document
+    document.body.appendChild(downloadLink);
+
+    // Trigger the download
+    downloadLink.click();
+
+    // Remove the link from the document
+    document.body.removeChild(downloadLink);
+  };
+
+  const [file, setFile] = useState(null);
+  const [uploaded, setUploaded] = useState(false);
+
+  const handleFileChange = (event) => {
+    const selectedFile = event.target.files[0];
+    setFile(selectedFile);
+  };
+
+  const handleUpload = async () => {
+    try {
+      const formData = new FormData();
+      formData.append("projectFile", file);
+
+      // Send the formData to your backend API endpoint for handling file upload
+      // Example using fetch:
+      const response = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        console.log("File uploaded successfully!");
+        setUploaded(true);
+        // You may want to handle success, such as showing a success message
+      } else {
+        console.error("File upload failed.");
+        // Handle the error, show an error message, etc.
+      }
+    } catch (error) {
+      console.error("Error uploading file:", error);
+      // Handle other types of errors (e.g., network error)
+    }
+  };
+
   return (
     <div class="flex h-full items-center">
       <div class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 md:px-8 lg:hidden ">
@@ -43,7 +101,7 @@ export default function DashboardTemp() {
                 <path
                   d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  stroke-width="2"
                   stroke-linecap="round"
                 />
               </svg>
@@ -91,7 +149,7 @@ export default function DashboardTemp() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
@@ -105,7 +163,7 @@ export default function DashboardTemp() {
             <li class="hs-accordion" id="account-accordion">
               <a
                 href="/client-dashboard/projects"
-                class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                class="  w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
               >
                 <svg
                   class="flex-shrink-0 mt-0.5 w-4 h-4"
@@ -138,7 +196,7 @@ export default function DashboardTemp() {
             <li class="hs-accordion" id="projects-accordion">
               <a
                 href="/client-dashboard/transactions"
-                class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
+                class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -194,7 +252,8 @@ export default function DashboardTemp() {
             <li class="hs-accordion" id="users-accordion">
               <a
                 href="/client-dashboard/account"
-                class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                type="button"
+                class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -226,56 +285,89 @@ export default function DashboardTemp() {
         </nav>
         <div class="w-full flex flex-col flex-wrap"></div>
       </div>
-      <div class="w-full h-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
-        <p class="pb-6 text-2xl font-semibold text-blue-600">My Profile</p>
-        <div class="flex flex-row items-start justify-center  gap-[5%] h-full  ">
-          <div class="w-[25%] h-full  flex flex-col items-start justify-start  p-4">
-            <div className="w-[90%]  h-[200px] overflow-hidden rounded-full">
-              <img
-                src="https://64.media.tumblr.com/7331186002b700ca5d807ea8eb5bb0e5/e57302c5207a9101-f2/s1280x1920/75e7691622fda44dd4597c709ebcf7649cdfbe37.jpg"
-                alt="developer"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div class="my-4 w-full">
-              <p class="text-2xl text-black-900 ">Chris Roberts</p>
-              <button class="py-1.5 text-sm bg-white border border-blue-600 w-full my-2 rounded-lg">
-                Edit profile
-              </button>
-            </div>
-            <div class="flex flex-col gap-y-2 mb-6">
-              <div>
-                <p class="text-black-bold">Location:</p>
-                <p class="text-gray-400">Miami, Florida</p>
+      <div>
+        <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
+          <p class="pb-6 text-2xl font-semibold text-blue-600">Transaction</p>
+          <div class="w-full flex flex-row flex-wrap justify-center m-auto gap-6 mb-10">
+            <div class="bg-white flex flex-wrap w-[100%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+              <div class="sm:col-span-9 mb-2 flex justify-between items-center">
+                <h3 class="text-lg font-bold text-gray-800">Fitness app</h3>
+                <p className="font-medium text-green-500 text-lg">$45</p>
               </div>
-               
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">
+                Empowering food ventors to reach their customers and handle
+                transactions efficiently. Dish listing, Food orders, delivery
+                tracking, customer feedback all in one app.
+              </p>
+              <div class="flex flex-row justify-between">
+                <p class="mt-1 text-gray-500 mb-4 text-sm ">Dina UMUTONI</p>
+
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-blue-100 text-blue-800 ">
+                  Done
+                </span>
+              </div>
+              {uploaded && (
+                <button
+                  class="mt-2 w-[150px] text-center py-1 px-4 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-white bg-blue-600 hover:bg-blue-500 disabled:opacity-50 disabled:pointer-events-none "
+                  onClick={handleDownload}
+                >
+                  Download code
+                </button>
+              )}
             </div>
           </div>
-          <div class="w-[65%] h-full flex flex-col items-start justify-start ">
-            <div class="p-4">
-              <div>
-                <p class="text-lg font-bold ">Bio</p>
-                <p class="py-3">
-                  Hello! I'm Chris, a startup founder with a vision to
-                  revolutionize the tech industry. As a visionary leader, I
-                  believe in the power of collaboration and cutting-edge
-                  solutions. Join me on this journey to redefine innovation and
-                  create a lasting impact in the digital landscape! 🌐
-                  #TechVisionary
-                </p>
-              </div>
-              <div>
-                <p class="text-lg font-bold mt-4 py-2">Occupation</p>
-                <p>StartUp Owner</p>
-              </div>
-              <div>
-                <p class="text-lg font-bold mt-4 py-2">Socials</p>
-                <img
-                  src="https://res.cloudinary.com/dpuyeblqg/image/upload/v1706335872/sociasl_p8gopn.png"
-                  alt=""
-                />
-              </div>
+        </div>
+        <div className="w-full flex flex-row flex-wrap justify-center m-auto gap-6">
+          <div className="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+            <div className="mb-2">
+              <label className="text-lg font-bold text-gray-800">
+                Select ZIP file:
+              </label>
+              <br></br>
+              <input type="file" onChange={handleFileChange} className="mt-2" />
             </div>
+            <button
+              onClick={handleUpload}
+              className="mt-4 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+            >
+              Upload
+              <svg
+                className="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+            {uploaded && (
+              <button
+                onClick={handleDownload}
+                className="mt-4 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              >
+                Download Project
+                <svg
+                  className="flex-shrink-0 w-4 h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
       </div>

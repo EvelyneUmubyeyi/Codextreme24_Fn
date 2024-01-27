@@ -245,7 +245,7 @@ export default function DashboardTransactions() {
 
             <a
               class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="/dev-dashboard/upload-code"
             >
               View
               <svg
@@ -313,7 +313,7 @@ export default function DashboardTransactions() {
 
             <a
               class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="/dev-dashboard/upload-code"
             >
               View
               <svg
@@ -346,7 +346,7 @@ export default function DashboardTransactions() {
             </div>
             <a
               class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="/dev-dashboard/upload-code"
             >
               View
               <svg
@@ -381,7 +381,7 @@ export default function DashboardTransactions() {
 
             <a
               class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="/dev-dashboard/upload-code"
             >
               View
               <svg
@@ -414,7 +414,7 @@ export default function DashboardTransactions() {
             </div>
             <a
               class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              href="/dev-dashboard/upload-code"
             >
               View
               <svg
