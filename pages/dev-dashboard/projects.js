@@ -64,7 +64,7 @@ export default function DashboardProjects() {
         <div class="px-6">
           <a
             class="flex-none text-xl font-semibold"
-            href="#"
+            href="/"
             aria-label="Brand"
           >
             <div class="flex items-center space-x-2">
@@ -192,8 +192,8 @@ export default function DashboardProjects() {
             </li>
 
             <li class="hs-accordion" id="users-accordion">
-              <button
-                type="button"
+              <a
+                href="/dev-dashboard/account"
                 class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
@@ -214,7 +214,7 @@ export default function DashboardProjects() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
                 Account
-              </button>
+              </a>
             </li>
           </ul>{" "}
           <a
@@ -227,7 +227,15 @@ export default function DashboardProjects() {
         <div class="w-full flex flex-col flex-wrap"></div>
       </div>
       <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
-        <p class="pb-6 text-2xl font-semibold text-blue-600">My projects</p>
+        <div class="flex flex-row justify-between">
+          <p class="pb-6 text-2xl font-semibold text-blue-600">My projects</p>
+          <a
+            href="/dev-dashboard/add-project"
+            class="h-8 pt-1 text-sm text-blue-600 bg-white border border-blue-600 px-4 rounded-lg"
+          >
+            Add Project
+          </a>
+        </div>
 
         <div class="w-full flex flex-row flex-wrap justify-center m-auto gap-6 mb-10">
           <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">

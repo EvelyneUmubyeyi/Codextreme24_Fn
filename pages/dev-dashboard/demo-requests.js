@@ -64,7 +64,7 @@ export default function DashboardDemoReuqests() {
         <div class="px-6">
           <a
             class="flex-none text-xl font-semibold"
-            href="#"
+            href="/"
             aria-label="Brand"
           >
             <div class="flex items-center space-x-2">
@@ -192,8 +192,8 @@ export default function DashboardDemoReuqests() {
             </li>
 
             <li class="hs-accordion" id="users-accordion">
-              <button
-                type="button"
+              <a
+                href="/dev-dashboard/account"
                 class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
@@ -214,7 +214,7 @@ export default function DashboardDemoReuqests() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
                 Account
-              </button>
+              </a>
             </li>
           </ul>{" "}
           <a
@@ -230,178 +230,120 @@ export default function DashboardDemoReuqests() {
         <p class="pb-6 text-2xl font-semibold text-blue-600">Demo schedule</p>
         <div class="flex flex-row gap-x-6 items-center justify-center">
           <div class="w-[45%] border border-gray-200 rounded-lg p-6 ">
-            <p class="pb-4 text-2xl font-semibold text-black-600">
-              Pending
+            <p class=" text-2xl font-semibold text-black-600">
+              Pending Requests
             </p>
             <ul role="list" class="divide-y divide-gray-100">
-              <li class="flex justify-between gap-x-6 py-5">
-                <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
-                  <div class="min-w-0 flex-auto">
-                    <p class="text-sm font-semibold leading-6 text-gray-900">
-                      Leslie Alexander
-                    </p>
-                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                      leslie.alexander@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Co-Founder / CEO
-                  </p>
-                  <p class="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
-                  </p>
-                </div>
-              </li>
-              <li class="flex justify-between gap-x-6 py-5">
-                <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
-                  <div class="min-w-0 flex-auto">
-                    <p class="text-sm font-semibold leading-6 text-gray-900">
-                      Michael Foster
-                    </p>
-                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                      michael.foster@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Co-Founder / CTO
-                  </p>
-                  <p class="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
-                  </p>
-                </div>
-              </li>
-              <li class="flex justify-between gap-x-6 py-5">
-                <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
-                  <div class="min-w-0 flex-auto">
-                    <p class="text-sm font-semibold leading-6 text-gray-900">
-                      Dries Vincent
-                    </p>
-                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                      dries.vincent@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Business Relations
-                  </p>
-                  <div class="mt-1 flex items-center gap-x-1.5">
-                    <div class="flex-none rounded-full bg-emerald-500/20 p-1">
-                      <div class="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
+              <li class="flex flex-col justify-between gap-x-6 pb-5  pt-2">
+                <div class="flex justify-between gap-x-6 py-5">
+                  <div class="flex min-w-0 gap-x-4">
+                    <div class="min-w-0 flex-auto">
+                      <p class="text-sm font-semibold leading-6 text-gray-900">
+                        Leslie Alexander
+                      </p>
+                      <p class="mt-1 truncate text-xs leading-5 text-gray-500">
+                        leslie.alexander@example.com
+                      </p>
                     </div>
-                    <p class="text-xs leading-5 text-gray-500">Online</p>
                   </div>
-                </div>
-              </li>
-              <li class="flex justify-between gap-x-6 py-5">
-                <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
-                  <div class="min-w-0 flex-auto">
+                  <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                     <p class="text-sm font-semibold leading-6 text-gray-900">
-                      Lindsay Walton
+                      Food App
                     </p>
-                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                      lindsay.walton@example.com
+                    <p class="mt-1 text-xs leading-5 text-gray-500">
+                      January 12th, 2024 at 05:00 PM
                     </p>
                   </div>
                 </div>
-                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Front-end Developer
-                  </p>
-                  <p class="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
-                  </p>
-                </div>
+                <button class="bg-blue-600 text-white rounded-md py-1.5 ">
+                  Accept
+                </button>
               </li>
-              <li class="flex justify-between gap-x-6 py-5">
-                <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>
-                  <div class="min-w-0 flex-auto">
-                    <p class="text-sm font-semibold leading-6 text-gray-900">
-                      Courtney Henry
-                    </p>
-                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                      courtney.henry@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">Designer</p>
-                  <p class="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
-                  </p>
-                </div>
-              </li>
-              <li class="flex justify-between gap-x-6 py-5">
-                <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
-                  <div class="min-w-0 flex-auto">
-                    <p class="text-sm font-semibold leading-6 text-gray-900">
-                      Tom Cook
-                    </p>
-                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                      tom.cook@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Director of Product
-                  </p>
-                  <div class="mt-1 flex items-center gap-x-1.5">
-                    <div class="flex-none rounded-full bg-emerald-500/20 p-1">
-                      <div class="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
+              <li class="flex flex-col justify-between gap-x-6 pb-5  pt-2">
+                <div class="flex justify-between gap-x-6 py-5">
+                  <div class="flex min-w-0 gap-x-4">
+                    <div class="min-w-0 flex-auto">
+                      <p class="text-sm font-semibold leading-6 text-gray-900">
+                        Michael Foster
+                      </p>
+                      <p class="mt-1 truncate text-xs leading-5 text-gray-500">
+                        michael.foster@example.com
+                      </p>
                     </div>
-                    <p class="text-xs leading-5 text-gray-500">Online</p>
+                  </div>
+                  <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                    <p class="text-sm font-semibold leading-6 text-gray-900">
+                      Fitness App
+                    </p>
+                    <p class="mt-1 text-xs leading-5 text-gray-500">
+                      January 12th, 2024 at 05:00 PM
+                    </p>
                   </div>
                 </div>
+                <button class="bg-blue-600 text-white rounded-md py-1.5 ">
+                  Accept
+                </button>
               </li>
+              <li class="flex flex-col justify-between gap-x-6 pb-5 pt-2">
+                <div class="flex justify-between gap-x-6 py-5">
+                  <div class="flex min-w-0 gap-x-4">
+                    <div class="min-w-0 flex-auto">
+                      <p class="text-sm font-semibold leading-6 text-gray-900">
+                        Dries Vincent
+                      </p>
+                      <p class="mt-1 truncate text-xs leading-5 text-gray-500">
+                        dries.vincent@example.com
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                    <p class="text-sm font-semibold leading-6 text-gray-900">
+                      E-commerce
+                    </p>
+                    <p class="mt-1 text-xs leading-5 text-gray-500">
+                      March 12th, 2024 at 05:00 PM
+                    </p>
+                  </div>
+                </div>
+                <button class="bg-blue-600 text-white rounded-md py-1.5 ">
+                  Accept
+                </button>
+              </li>
+              {/* <li class="flex flex-col justify-between gap-x-6 py-5">
+                <div class="flex justify-between gap-x-6 py-5">
+                  <div class="flex min-w-0 gap-x-4">
+                    <div class="min-w-0 flex-auto">
+                      <p class="text-sm font-semibold leading-6 text-gray-900">
+                        Lindsay Walton
+                      </p>
+                      <p class="mt-1 truncate text-xs leading-5 text-gray-500">
+                        lindsay.walton@example.com
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                    <p class="text-sm font-semibold leading-6 text-gray-900">
+                      Task Management App
+                    </p>
+                    <p class="mt-1 text-xs leading-5 text-gray-500">
+                      March 12th, 2024 at 05:00 PM
+                    </p>
+                  </div>
+                </div>
+                <button class="bg-blue-600 text-white rounded-md py-1.5 ">
+                  Accept
+                </button>
+              </li> */}
             </ul>
           </div>
           <div class="w-[45%] border border-gray-200 rounded-lg p-6 ">
             <p class="pb-4 text-2xl font-semibold text-black-600">
-              
+              Upcoming Demos
             </p>
             <ul role="list" class="divide-y divide-gray-100">
               <li class="flex justify-between gap-x-6 py-5">
                 <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
                   <div class="min-w-0 flex-auto">
                     <p class="text-sm font-semibold leading-6 text-gray-900">
                       Leslie Alexander
@@ -412,21 +354,16 @@ export default function DashboardDemoReuqests() {
                   </div>
                 </div>
                 <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Co-Founder / CEO
+                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                    Food App
                   </p>
                   <p class="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                    January 12th, 2024 at 05:00 PM
                   </p>
                 </div>
               </li>
               <li class="flex justify-between gap-x-6 py-5">
                 <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
                   <div class="min-w-0 flex-auto">
                     <p class="text-sm font-semibold leading-6 text-gray-900">
                       Michael Foster
@@ -437,21 +374,36 @@ export default function DashboardDemoReuqests() {
                   </div>
                 </div>
                 <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Co-Founder / CTO
+                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                    Fitness App
                   </p>
                   <p class="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                    January 12th, 2024 at 05:00 PM
                   </p>
                 </div>
               </li>
               <li class="flex justify-between gap-x-6 py-5">
                 <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
+                  <div class="min-w-0 flex-auto">
+                    <p class="text-sm font-semibold leading-6 text-gray-900">
+                      Michael Foster
+                    </p>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
+                      michael.foster@example.com
+                    </p>
+                  </div>
+                </div>
+                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                    Fitness App
+                  </p>
+                  <p class="mt-1 text-xs leading-5 text-gray-500">
+                    January 12th, 2024 at 05:00 PM
+                  </p>
+                </div>
+              </li>
+              <li class="flex justify-between gap-x-6 py-5">
+                <div class="flex min-w-0 gap-x-4">
                   <div class="min-w-0 flex-auto">
                     <p class="text-sm font-semibold leading-6 text-gray-900">
                       Dries Vincent
@@ -462,24 +414,16 @@ export default function DashboardDemoReuqests() {
                   </div>
                 </div>
                 <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Business Relations
+                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                    E-commerce
                   </p>
-                  <div class="mt-1 flex items-center gap-x-1.5">
-                    <div class="flex-none rounded-full bg-emerald-500/20 p-1">
-                      <div class="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
-                    </div>
-                    <p class="text-xs leading-5 text-gray-500">Online</p>
-                  </div>
+                  <p class="mt-1 text-xs leading-5 text-gray-500">
+                    March 12th, 2024 at 05:00 PM
+                  </p>
                 </div>
               </li>
               <li class="flex justify-between gap-x-6 py-5">
                 <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
                   <div class="min-w-0 flex-auto">
                     <p class="text-sm font-semibold leading-6 text-gray-900">
                       Lindsay Walton
@@ -490,63 +434,12 @@ export default function DashboardDemoReuqests() {
                   </div>
                 </div>
                 <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Front-end Developer
+                  <p class="text-sm font-semibold leading-6 text-gray-900">
+                    Task Management App
                   </p>
                   <p class="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
+                    March 12th, 2024 at 05:00 PM
                   </p>
-                </div>
-              </li>
-              <li class="flex justify-between gap-x-6 py-5">
-                <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>
-                  <div class="min-w-0 flex-auto">
-                    <p class="text-sm font-semibold leading-6 text-gray-900">
-                      Courtney Henry
-                    </p>
-                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                      courtney.henry@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">Designer</p>
-                  <p class="mt-1 text-xs leading-5 text-gray-500">
-                    Last seen <time datetime="2023-01-23T13:23Z">3h ago</time>
-                  </p>
-                </div>
-              </li>
-              <li class="flex justify-between gap-x-6 py-5">
-                <div class="flex min-w-0 gap-x-4">
-                  <img
-                    class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  ></img>{" "}
-                  <div class="min-w-0 flex-auto">
-                    <p class="text-sm font-semibold leading-6 text-gray-900">
-                      Tom Cook
-                    </p>
-                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">
-                      tom.cook@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                  <p class="text-sm leading-6 text-gray-900">
-                    Director of Product
-                  </p>
-                  <div class="mt-1 flex items-center gap-x-1.5">
-                    <div class="flex-none rounded-full bg-emerald-500/20 p-1">
-                      <div class="h-1.5 w-1.5 rounded-full bg-emerald-500"></div>
-                    </div>
-                    <p class="text-xs leading-5 text-gray-500">Online</p>
-                  </div>
                 </div>
               </li>
             </ul>

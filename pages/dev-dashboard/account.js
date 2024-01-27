@@ -105,7 +105,7 @@ export default function DashboardTemp() {
             <li class="hs-accordion" id="account-accordion">
               <a
                 href="/dev-dashboard/projects"
-                class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
                   class="flex-shrink-0 mt-0.5 w-4 h-4"
@@ -194,7 +194,7 @@ export default function DashboardTemp() {
             <li class="hs-accordion" id="users-accordion">
               <a
                 href="/dev-dashboard/account"
-                class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -226,8 +226,66 @@ export default function DashboardTemp() {
         </nav>
         <div class="w-full flex flex-col flex-wrap"></div>
       </div>
-      <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
-        <p class="pb-6 text-2xl font-semibold text-blue-600">My projects</p>
+      <div class="w-full h-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
+        <p class="pb-6 text-2xl font-semibold text-blue-600">My Profile</p>
+        <div class="flex flex-row items-start justify-center  gap-[5%] h-full  ">
+          <div class="w-[25%] h-full  flex flex-col items-start justify-start  p-4">
+            <div className="w-[90%]  h-[200px] overflow-hidden rounded-full">
+              <img
+                src="https://th.bing.com/th/id/OIP.FFAGaoX_NnQlXOE3cR46nQHaFj?rs=1&pid=ImgDetMain"
+                alt="developer"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div class="my-4 w-full">
+              <p class="text-2xl text-black-900 ">Jone Doe</p>
+              <button class="py-1.5 text-sm bg-white border border-blue-600 w-full my-2 rounded-lg">
+                Edit profile
+              </button>
+            </div>
+            <div class="flex flex-col gap-y-2 mb-6">
+              <div>
+                <p class="text-black-bold">Location:</p>
+                <p class="text-gray-400">Kigali, Rwanda</p>
+              </div>
+              <div>
+                <p class="text-black-bold">Portfolio link:</p>
+                <a href="#" class="text-gray-400 underline">
+                  www.example.com
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-[65%] h-full flex flex-col items-start justify-start ">
+            <div class="p-4">
+              <div>
+                <p class="text-lg font-bold ">Bio</p>
+                <p class="py-3">
+                  Hey there! 👋 I'm Dina Umutoni, a kigali-based software
+                  engineer on a mission to craft innovative solutions. From
+                  dynamic web apps to mobile wonders, I code with passion. ALU
+                  alum, tech explorer, and Ttech enthusiast. Let's connect and
+                  explore the world of possibilities together! 🚀
+                  #CodePassionately
+                </p>
+              </div>
+              <div>
+                <p class="text-lg font-bold my-4 ">Skills</p>
+                <img
+                  src="https://res.cloudinary.com/dpuyeblqg/image/upload/v1706335483/tech_stack_oxlfc2.png"
+                  alt="tech stack"
+                />
+              </div>
+              <div>
+                <p class="text-lg font-bold mt-4 py-2">Socials</p>
+                <img
+                  src="https://res.cloudinary.com/dpuyeblqg/image/upload/v1706335872/sociasl_p8gopn.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
