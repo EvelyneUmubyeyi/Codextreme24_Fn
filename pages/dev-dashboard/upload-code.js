@@ -137,7 +137,7 @@ export default function DashboardTransactions() {
             <li>
               <a
                 class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
-                href="/client-dashboard"
+                href="/dev-dashboard"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -160,7 +160,7 @@ export default function DashboardTransactions() {
 
             <li class="hs-accordion" id="account-accordion">
               <a
-                href="/client-dashboard/projects"
+                href="/dev-dashboard/projects"
                 class="  w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
               >
                 <svg
@@ -193,7 +193,7 @@ export default function DashboardTransactions() {
 
             <li class="hs-accordion" id="projects-accordion">
               <a
-                href="/client-dashboard/transactions"
+                href="/dev-dashboard/transactions"
                 class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
@@ -218,7 +218,7 @@ export default function DashboardTransactions() {
             <li>
               <a
                 class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
-                href="/client-dashboard/demo-requests"
+                href="/dev-dashboard/demo-requests"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -249,7 +249,7 @@ export default function DashboardTransactions() {
 
             <li class="hs-accordion" id="users-accordion">
               <a
-                href="/client-dashboard/account"
+                href="/dev-dashboard/account"
                 type="button"
                 class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >

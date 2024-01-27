@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../components/navbar";
 
 export default function ProjectDetails() {
   const [features, setFeatures] = useState([
@@ -18,14 +19,16 @@ export default function ProjectDetails() {
   ]);
 
   return (
-    <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <>
+    <Navbar/>
+    <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto mt-8">
       <div class="bg-white rounded-xl shadow">
         <div className="relative h-[300px] rounded-t-xl bg-[url('https://preline.co/assets/svg/examples/abstract-bg-1.svg')] bg-no-repeat bg-cover bg-center">
           <div className="absolute inset-0 flex justify-center items-center">
             <img
-              src="https://images.unsplash.com/photo-1705951501021-a89160066251?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZpdG5lc3MlMjBhcHB8ZW58MHx8MHx8fDA%3D"
               alt="Uploaded"
-              className="h-[300px] w-full object-cover object-center rounded-t-xl"
+              className="h-[300px] w-full object-cover object-top rounded-t-xl"
             />
           </div>
         </div>
@@ -227,5 +230,6 @@ export default function ProjectDetails() {
         </div>
       </div>
     </div>
+    </>
   );
 }

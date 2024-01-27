@@ -157,7 +157,7 @@ export default function Projects() {
       </div>
 
 
-      <div class="w-[80%] flex justify-center m-auto cursor-pointer mb-8" onClick={handleViewProject}>
+      <div class="w-[80%] flex justify-center m-auto cursor-pointer mb-8">
         <div class="bg-white border rounded-xl shadow-sm sm:flex w-full h-[280px]">
           <div class=" relative w-[40%] rounded-t-xl overflow-hidden pt-[40%] sm:rounded-s-xl md:rounded-se-none">
             <img
@@ -183,7 +183,7 @@ export default function Projects() {
                 </div>
                 <p className="font-medium text-green-500 text-lg">$45</p>
               </div>
-              <h3 class="text-lg font-bold text-gray-800">Fitness App</h3>
+              <h3 class="text-lg font-bold text-gray-800" onClick={handleViewProject}>Fitness App</h3>
               <p class="mt-1 text-gray-500 mb-4 text-sm ">
                 Empowering users to achieve their fitness goals through
                 personalized workouts, nutrition tracking, and motivational
@@ -247,7 +247,7 @@ export default function Projects() {
                 </div>
                 <p className="font-medium text-green-500 text-lg">$45</p>
               </div>
-              <h3 class="text-lg font-bold text-gray-800">Food Delivery App</h3>
+              <h3 class="text-lg font-bold text-gray-800" onClick={handleViewProject}>Food Delivery App</h3>
               <p class="mt-1 text-gray-500 mb-4 text-sm ">
               The food delivery app is a user-friendly platform that enables customers to browse, order, and receive a diverse range of cuisines from local restaurants.
               </p>
