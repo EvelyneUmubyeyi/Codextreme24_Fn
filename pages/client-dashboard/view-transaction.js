@@ -1,6 +1,30 @@
 import React, { useState } from "react";
 
 export default function DashboardTransactions() {
+  const handleDownload = () => {
+    // Create a sample text file content
+    const fileContent = "Hello, this is a downloadable file!";
+
+    // Create a Blob with the file content
+    const blob = new Blob([fileContent], { type: "text/plain" });
+
+    // Create a download link
+    const downloadLink = document.createElement("a");
+    downloadLink.href = URL.createObjectURL(blob);
+
+    // Set the file name
+    downloadLink.download = "sample.txt";
+
+    // Append the link to the document
+    document.body.appendChild(downloadLink);
+
+    // Trigger the download
+    downloadLink.click();
+
+    // Remove the link from the document
+    document.body.removeChild(downloadLink);
+  };
+
   return (
     <div class="flex h-full items-center">
       <div class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 md:px-8 lg:hidden ">
@@ -230,208 +254,29 @@ export default function DashboardTransactions() {
       <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
         <p class="pb-6 text-2xl font-semibold text-blue-600">Transaction</p>
         <div class="w-full flex flex-row flex-wrap justify-center m-auto gap-6 mb-10">
-          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+          <div class="bg-white flex flex-wrap w-[100%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
             <div class="sm:col-span-9 mb-2 flex justify-between items-center">
-              <h3 class="text-lg font-bold text-gray-800">Food app</h3>
+              <h3 class="text-lg font-bold text-gray-800">Fitness app</h3>
               <p className="font-medium text-green-500 text-lg">$45</p>
             </div>
+            <p class="mt-1 text-gray-500 mb-4 text-sm ">
+              Empowering food ventors to reach their customers and handle
+              transactions efficiently. Dish listing, Food orders, delivery
+              tracking, customer feedback all in one app.
+            </p>
             <div class="flex flex-row justify-between">
               <p class="mt-1 text-gray-500 mb-4 text-sm ">Dina UMUTONI</p>
 
-              <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-yellow-100 text-yellow-800 ">
-                Pending
-              </span>
-            </div>
-
-            <a
-              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="/client-dashboard/view-transaction"
-            >
-              View
-              <svg
-                class="flex-shrink-0 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
-            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
-              <h3 class="text-lg font-bold text-gray-800">E-commerce app</h3>
-              <p className="font-medium text-green-500 text-lg">$45</p>
-            </div>
-            <div class="flex flex-row justify-between">
-              <p class="mt-1 text-gray-500 mb-4 text-sm ">Michael Foster</p>
-              <span class="inline-flex items-center py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-blue-100 text-blue-800">
+              <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-blue-100 text-blue-800 ">
                 Done
               </span>
             </div>
-
-            <a
-              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="/client-dashboard/view-transaction"
+            <button
+              class="mt-2 w-[150px] text-center py-1 px-4 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-white bg-blue-600 hover:bg-blue-500 disabled:opacity-50 disabled:pointer-events-none "
+              onClick={handleDownload}
             >
-              View
-              <svg
-                class="flex-shrink-0 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
-            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
-              <h3 class="text-lg font-bold text-gray-800">
-                Task management app
-              </h3>
-              <p className="font-medium text-green-500 text-lg">$45</p>
-            </div>
-            <div class="flex flex-row justify-between">
-              <p class="mt-1 text-gray-500 mb-4 text-sm ">Dries Vincent</p>
-              <span class="inline-flex items-center py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-blue-100 text-blue-800">
-                Done
-              </span>
-            </div>
-
-            <a
-              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="/client-dashboard/view-transaction"
-            >
-              View
-              <svg
-                class="flex-shrink-0 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
-            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
-              <h3 class="text-lg font-bold text-gray-800">Fitness app</h3>
-              <p className="font-medium text-green-500 text-lg">$45</p>
-            </div>
-            <div class="flex flex-row justify-between">
-              <p class="mt-1 text-gray-500 mb-4 text-sm ">Lindsay Walton</p>
-
-              <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-yellow-100 text-yellow-800 ">
-                Pending
-              </span>
-            </div>
-            <a
-              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="/client-dashboard/view-transaction"
-            >
-              View
-              <svg
-                class="flex-shrink-0 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
-            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
-              <h3 class="text-lg font-bold text-gray-800">
-                Task management app
-              </h3>
-              <p className="font-medium text-green-500 text-lg">$45</p>
-            </div>
-            <div class="flex flex-row justify-between">
-              <p class="mt-1 text-gray-500 mb-4 text-sm ">Dries Vincent</p>
-              <span class="inline-flex items-center py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-blue-100 text-blue-800">
-                Done
-              </span>
-            </div>
-
-            <a
-              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="/client-dashboard/view-transaction"
-            >
-              View
-              <svg
-                class="flex-shrink-0 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
-          </div>
-          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
-            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
-              <h3 class="text-lg font-bold text-gray-800">Fitness app</h3>
-              <p className="font-medium text-green-500 text-lg">$45</p>
-            </div>
-            <div class="flex flex-row justify-between">
-              <p class="mt-1 text-gray-500 mb-4 text-sm ">Lindsay Walton</p>
-
-              <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-red-100 text-red-800 ">
-                Canceled
-              </span>
-            </div>
-            <a
-              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="/client-dashboard/view-transaction"
-            >
-              View
-              <svg
-                class="flex-shrink-0 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </a>
+              Download code
+            </button>
           </div>
         </div>
       </div>
