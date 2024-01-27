@@ -29,35 +29,33 @@ export default function DashboardTransactions() {
   const [uploaded, setUploaded] = useState(false);
 
   const handleFileChange = (event) => {
+    event.preventDefault(); // Prevents the default behavior of the file input
     const selectedFile = event.target.files[0];
     setFile(selectedFile);
   };
+  
 
   const handleUpload = async () => {
+    if (!file) {
+      console.error("No file selected.");
+      // Handle the case where no file is selected
+      return;
+    }
+  
     try {
-      const formData = new FormData();
-      formData.append("projectFile", file);
-
-      // Send the formData to your backend API endpoint for handling file upload
-      // Example using fetch:
-      const response = await fetch("/api/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        console.log("File uploaded successfully!");
-        setUploaded(true);
-        // You may want to handle success, such as showing a success message
-      } else {
-        console.error("File upload failed.");
-        // Handle the error, show an error message, etc.
-      }
+      // Simulate the file upload without an actual API call
+      // For demonstration purposes, use a setTimeout to mimic a delay
+      await new Promise(resolve => setTimeout(resolve, 2000));
+  
+      console.log("File uploaded successfully!");
+      setUploaded(true);
+      // You may want to handle success, such as showing a success message
     } catch (error) {
       console.error("Error uploading file:", error);
       // Handle other types of errors (e.g., network error)
     }
   };
+  
 
   return (
     <div class="flex h-full items-center">
