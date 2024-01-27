@@ -13,7 +13,7 @@ export default function DashboardTransactions() {
     downloadLink.href = URL.createObjectURL(blob);
 
     // Set the file name
-    downloadLink.download = "sample.txt";
+    downloadLink.download = "project.zip";
 
     // Append the link to the document
     document.body.appendChild(downloadLink);
