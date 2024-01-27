@@ -29,7 +29,6 @@ export default function Projects() {
   };
 
   const handleDropdown = () => {
-    console.log("heyyy");
     setOptionsVisible(!optionsVisible);
   };
 
@@ -40,7 +39,7 @@ export default function Projects() {
   return (
     <div class="w-full h-full m-auto">
       <Navbar/>
-      <div class="flex w-full h-full justify-center py-4 mb-8 mt-20">
+      <div class="flex w-full h-full justify-center py-4 mb-8 mt-24">
         <p class="block text-2xl font-bold text-gray-800 sm:text-3xl">
           Get any <span className="text-blue-600">project</span> from our rich{" "}
           <span className="text-blue-600">pool</span>
@@ -156,12 +155,14 @@ export default function Projects() {
           </div>}
         </div>
       </div>
-      <div class="w-[80%] flex justify-center m-auto cursor-pointer" onClick={handleViewProject}>
+
+
+      <div class="w-[80%] flex justify-center m-auto cursor-pointer mb-8" onClick={handleViewProject}>
         <div class="bg-white border rounded-xl shadow-sm sm:flex w-full h-[280px]">
           <div class=" relative w-[40%] rounded-t-xl overflow-hidden pt-[40%] sm:rounded-s-xl md:rounded-se-none">
             <img
-              class="w-full h-[278px] absolute top-0 start-0 object-cover rounded-l-xl"
-              src="https://images.unsplash.com/photo-1705951501021-a89160066251?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="w-full h-[278px] absolute top-0 start-0 object-cover object-top rounded-l-xl"
+              src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZpdG5lc3MlMjBhcHB8ZW58MHx8MHx8fDA%3D"
               alt="Image Description"
             />
           </div>
@@ -175,15 +176,15 @@ export default function Projects() {
                     alt="Image Description"
                   />
                   <div class="flex gap-x-2">
-                    <p class="py-2 inline-flex items-center gap-x-2 text-md font-medium text-gray-500">
+                    <p class="py-2 inline-flex items-center gap-x-2 text-md font-semibold text-gray-500 text-sm">
                       Jane Doe
                     </p>
                   </div>
                 </div>
                 <p className="font-medium text-green-500 text-lg">$45</p>
               </div>
-              <h3 class="text-lg font-bold text-gray-800">Fitness app</h3>
-              <p class="mt-1 text-gray-500 mb-3  ">
+              <h3 class="text-lg font-bold text-gray-800">Fitness App</h3>
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">
                 Empowering users to achieve their fitness goals through
                 personalized workouts, nutrition tracking, and motivational
                 support in one comprehensive app.
@@ -218,6 +219,69 @@ export default function Projects() {
           </div>
         </div>
       </div>
+
+
+      <div class="w-[80%] flex justify-center m-auto cursor-pointer" onClick={handleViewProject}>
+        <div class="bg-white border rounded-xl shadow-sm sm:flex w-full h-[280px]">
+          <div class=" relative w-[40%] rounded-t-xl overflow-hidden pt-[40%] sm:rounded-s-xl md:rounded-se-none">
+            <img
+              class="w-full h-[278px] absolute top-0 start-0 object-cover object-top rounded-l-xl"
+              src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZCUyMGRlbGl2ZXJ5JTIwYXBwfGVufDB8fDB8fHww"
+              alt="Image Description"
+            />
+          </div>
+          <div class="flex flex-wrap w-[60%]">
+            <div class="p-4 flex flex-col h-full sm:p-5 w-full">
+              <div class="sm:col-span-9 mb-2 flex justify-between items-center">
+                <div class="flex items-center gap-5">
+                  <img
+                    class="inline-block h-12 w-12 rounded-full ring-2 ring-white object-cover object-top"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D"
+                    alt="Image Description"
+                  />
+                  <div class="flex gap-x-2">
+                    <p class="py-2 inline-flex items-center gap-x-2 text-md font-semibold text-gray-500 text-sm">
+                      Jane Doe
+                    </p>
+                  </div>
+                </div>
+                <p className="font-medium text-green-500 text-lg">$45</p>
+              </div>
+              <h3 class="text-lg font-bold text-gray-800">Food Delivery App</h3>
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">
+              The food delivery app is a user-friendly platform that enables customers to browse, order, and receive a diverse range of cuisines from local restaurants.
+              </p>
+              <div class="w-full mb-3">
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-medium bg-gray-100 text-gray-800 mr-2">
+                  React
+                </span>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-medium bg-gray-50 text-gray-500 mr-2">
+                  Node
+                </span>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-medium bg-teal-100 text-teal-800 mr-2">
+                  Tailwind
+                </span>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-medium bg-blue-100 text-blue-800 mr-2">
+                  Typescript
+                </span>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-medium bg-red-100 text-red-800 mr-2">
+                  Sequelize
+                </span>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-lg text-xs font-medium bg-yellow-100 text-yellow-800 mr-2">
+                  Postgres
+                </span>
+              </div>
+              <a
+                class="w-fit mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                href="/bookdemo"
+              >
+                {buttonText}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }

@@ -81,7 +81,7 @@ export default function DashboardDemoReuqests() {
             <li>
               <a
                 class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
-                href="/dev-dashboard"
+                href="/client-dashboard"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -104,7 +104,7 @@ export default function DashboardDemoReuqests() {
 
             <li class="hs-accordion" id="account-accordion">
               <a
-                href="/dev-dashboard/projects"
+                href="/client-dashboard/projects"
                 class="  w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
               >
                 <svg
@@ -131,13 +131,13 @@ export default function DashboardDemoReuqests() {
                   <path d="m14.3 16.6 1-.4" />
                   <path d="m20.7 13.8 1-.4" />
                 </svg>
-                Projects
+                Acquired Projects
               </a>
             </li>
 
             <li class="hs-accordion" id="projects-accordion">
               <a
-                href="/dev-dashboard/transactions"
+                href="/client-dashboard/transactions"
                 class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
               >
                 <svg
@@ -162,7 +162,7 @@ export default function DashboardDemoReuqests() {
             <li>
               <a
                 class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
-                href="/dev-dashboard/demo-requests"
+                href="/client-dashboard/demo-requests"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -193,7 +193,7 @@ export default function DashboardDemoReuqests() {
 
             <li class="hs-accordion" id="users-accordion">
               <a
-                href="/dev-dashboard/account"
+                href="/client-dashboard/account"
                 class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
@@ -231,7 +231,7 @@ export default function DashboardDemoReuqests() {
         <div class="flex flex-row gap-x-6 items-center justify-center">
           <div class="w-[45%] border border-gray-200 rounded-lg p-6 ">
             <p class=" text-2xl font-semibold text-black-600">
-              Pending Requests
+              Completed Demos
             </p>
             <ul role="list" class="divide-y divide-gray-100">
               <li class="flex flex-col justify-between gap-x-6 pb-5  pt-2">
@@ -255,9 +255,9 @@ export default function DashboardDemoReuqests() {
                     </p>
                   </div>
                 </div>
-                <button class="bg-blue-600 text-white rounded-md py-1.5 ">
-                  Accept
-                </button>
+                <a href="/client-dashboard/payment" class="bg-blue-600 text-center text-white rounded-md py-1.5 ">
+                  Procceed to Payment
+                </a>
               </li>
               <li class="flex flex-col justify-between gap-x-6 pb-5  pt-2">
                 <div class="flex justify-between gap-x-6 py-5">
@@ -280,9 +280,9 @@ export default function DashboardDemoReuqests() {
                     </p>
                   </div>
                 </div>
-                <button class="bg-blue-600 text-white rounded-md py-1.5 ">
-                  Accept
-                </button>
+                <a href="/client-dashboard/payment" class="bg-blue-600 text-center text-white rounded-md py-1.5 ">
+                  Procceed to Payment
+                </a>
               </li>
               <li class="flex flex-col justify-between gap-x-6 pb-5 pt-2">
                 <div class="flex justify-between gap-x-6 py-5">
@@ -305,9 +305,9 @@ export default function DashboardDemoReuqests() {
                     </p>
                   </div>
                 </div>
-                <button class="bg-blue-600 text-white rounded-md py-1.5 ">
-                  Accept
-                </button>
+                <a href="/client-dashboard/payment" class="bg-blue-600 text-center text-white rounded-md py-1.5 ">
+                  Procceed to Payment
+                </a>
               </li>
               {/* <li class="flex flex-col justify-between gap-x-6 py-5">
                 <div class="flex justify-between gap-x-6 py-5">
@@ -332,7 +332,7 @@ export default function DashboardDemoReuqests() {
                   </div>
                 </div>
                 <button class="bg-blue-600 text-white rounded-md py-1.5 ">
-                  Accept
+                  Procceed to Payment
                 </button>
               </li> */}
             </ul>

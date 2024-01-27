@@ -1,8 +1,62 @@
 import React, { useState } from "react";
 
-export default function DashboardTemp() {
+export default function DashboardHome() {
   return (
     <div class="flex h-full items-center">
+      <div class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 md:px-8 lg:hidden ">
+        <div class="flex items-center py-4">
+          <button
+            type="button"
+            class="text-gray-500 hover:text-gray-600"
+            data-hs-overlay="#application-sidebar"
+            aria-controls="application-sidebar"
+            aria-label="Toggle navigation"
+          >
+            <span class="sr-only">Toggle Navigation</span>
+            <svg
+              class="w-5 h-5"
+              width="16"
+              height="16"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+          <ol
+            class="ms-3 flex items-center whitespace-nowrap"
+            aria-label="Breadcrumb"
+          >
+            <li class="flex items-center text-sm text-gray-800 ">
+              Application Layout
+              <svg
+                class="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 "
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </li>
+            <li
+              class="text-sm font-semibold text-gray-800 truncate"
+              aria-current="page"
+            >
+              Dashboard
+            </li>
+          </ol>
+        </div>
+      </div>
       <div class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 md:px-8 lg:hidden ">
         <div class="flex items-center py-4">
           <button
@@ -80,8 +134,8 @@ export default function DashboardTemp() {
           <ul class="space-y-1.5">
             <li>
               <a
-                class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
-                href="/dev-dashboard"
+                class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                href="/client-dashboard"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -104,8 +158,8 @@ export default function DashboardTemp() {
 
             <li class="hs-accordion" id="account-accordion">
               <a
-                href="/dev-dashboard/projects"
-                class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
+                href="/client-dashboard/projects"
               >
                 <svg
                   class="flex-shrink-0 mt-0.5 w-4 h-4"
@@ -131,13 +185,13 @@ export default function DashboardTemp() {
                   <path d="m14.3 16.6 1-.4" />
                   <path d="m20.7 13.8 1-.4" />
                 </svg>
-                Projects
+                Acquired Projects
               </a>
             </li>
 
             <li class="hs-accordion" id="projects-accordion">
               <a
-                href="/dev-dashboard/transactions"
+                href="/client-dashboard/transactions"
                 class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
               >
                 <svg
@@ -162,7 +216,7 @@ export default function DashboardTemp() {
             <li>
               <a
                 class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
-                href="/dev-dashboard/demo-requests"
+                href="/client-dashboard/demo-requests"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -193,7 +247,7 @@ export default function DashboardTemp() {
 
             <li class="hs-accordion" id="users-accordion">
               <a
-                href="/dev-dashboard/account"
+                href="/client-dashboard/account"
                 class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
@@ -226,8 +280,18 @@ export default function DashboardTemp() {
         </nav>
         <div class="w-full flex flex-col flex-wrap"></div>
       </div>
-      <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
-        <p class="pb-6 text-2xl font-semibold text-blue-600">My projects</p>
+      <div class="w-full h-[100%] pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
+        <header>
+          <p class="mb-2 text-2xl font-semibold text-blue-600">Overview</p>
+
+          <p class="mt-2 text-lg text-gray-800 ">
+            Snapshot of your projects and their performance.
+          </p>
+          <div class="mt-5 flex flex-col items-center gap-2 sm:flex-row sm:gap-3"></div>
+        </header>
+        <div class="flex h-[60%] justify-center gap-4 py-4 p-14">
+          Page under construction ...  
+        </div>
       </div>
     </div>
   );

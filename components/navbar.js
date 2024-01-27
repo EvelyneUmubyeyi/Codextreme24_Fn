@@ -1,6 +1,17 @@
 import React, { useState } from "react";
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
+  const router = useRouter();
+
+  const goToDashboard = () =>{
+    console.log('clicked')
+    if (localStorage.getItem("role") == 'developer'){
+      router.push('/dev-dashboard')
+    }else if(localStorage.getItem("role") == 'client'){
+      router.push('/client-dashboard')
+    }
+  }
   return (
     <>
       <header class="absolute inset-x-0 top-0 z-50">
@@ -10,61 +21,42 @@ export default function Navbar() {
         >
           <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 p-1.5">
-              {/* <span class="sr-only">Your Company</span> */}
               <div class="flex items-center space-x-2">
                 <div class="text-4xl font-bold text-blue-500">Sway</div>
               </div>
-              {/* <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                ></img> */}
             </a>
           </div>
-          <div class="flex lg:hidden">
-            <button
-              type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+          <div class="flex gap-x-12">
+            <a
+              href="#"
+              class="text-sm font-semibold leading-6 text-gray-900 mr-4 cursor-pointer"
             >
-              <span class="sr-only">Open main menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
               About
             </a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
+            <a
+              href="#"
+              class="text-sm font-semibold leading-6 text-gray-900 mr-4 cursor-pointer"
+            >
               Projects
             </a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">
+            <a
+              href="/projects"
+              class="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+            >
               Resources
             </a>
           </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
+          <div class="lg:flex lg:flex-1 lg:justify-end" onClick={goToDashboard}>
+            {/* <a
               href="/dev-dashboard"
-              class="text-sm font-semibold leading-6 text-gray-900"
-            >
+              class="text-sm font-semibold leading-6 text-gray-900 cursor-pointer"
+            > */}
               <img
                 class="h-10 w-auto"
                 src="https://res.cloudinary.com/dpuyeblqg/image/upload/v1706278352/user-profile-svgrepo-com_jmmx1e.svg"
                 alt=""
-              ></img>
-            </a>
+              />
+            {/* </a> */}
           </div>
         </nav>
         <div class="lg:hidden" role="dialog" aria-modal="true">
@@ -99,42 +91,6 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a
-                    href=""
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    About
-                  </a>
-                  <a
-                    href="/projects"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Projects
-                  </a>
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Resources
-                  </a>
-                </div>
-                <div class="py-6">
-                  <a
-                    href="/dev-dashboard"
-                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    <img
-                      class="h-10 w-auto"
-                      src="https://res.cloudinary.com/dpuyeblqg/image/upload/v1706278352/user-profile-svgrepo-com_jmmx1e.svg"
-                      alt=""
-                    ></img>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>

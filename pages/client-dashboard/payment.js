@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function DashboardTemp() {
+export default function DashboardDemoReuqests() {
   return (
     <div class="flex h-full items-center">
       <div class="sticky top-0 inset-x-0 z-20 bg-white border-y px-4 sm:px-6 md:px-8 lg:hidden ">
@@ -81,7 +81,7 @@ export default function DashboardTemp() {
             <li>
               <a
                 class="w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
-                href="/dev-dashboard"
+                href="/client-dashboard"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -104,8 +104,8 @@ export default function DashboardTemp() {
 
             <li class="hs-accordion" id="account-accordion">
               <a
-                href="/dev-dashboard/projects"
-                class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                href="/client-dashboard/projects"
+                class="  w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
               >
                 <svg
                   class="flex-shrink-0 mt-0.5 w-4 h-4"
@@ -131,14 +131,14 @@ export default function DashboardTemp() {
                   <path d="m14.3 16.6 1-.4" />
                   <path d="m20.7 13.8 1-.4" />
                 </svg>
-                Projects
+                Acquired Projects
               </a>
             </li>
 
             <li class="hs-accordion" id="projects-accordion">
               <a
-                href="/dev-dashboard/transactions"
-                class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
+                href="/client-dashboard/transactions"
+                class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -161,8 +161,8 @@ export default function DashboardTemp() {
 
             <li>
               <a
-                class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 "
-                href="/dev-dashboard/demo-requests"
+                class="flex items-center gap-x-3.5 py-2 px-2.5 bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-100"
+                href="/client-dashboard/demo-requests"
               >
                 <svg
                   class="flex-shrink-0 w-4 h-4"
@@ -193,7 +193,7 @@ export default function DashboardTemp() {
 
             <li class="hs-accordion" id="users-accordion">
               <a
-                href="/dev-dashboard/account"
+                href="/client-dashboard/account"
                 class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
                 <svg
@@ -226,8 +226,12 @@ export default function DashboardTemp() {
         </nav>
         <div class="w-full flex flex-col flex-wrap"></div>
       </div>
-      <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
-        <p class="pb-6 text-2xl font-semibold text-blue-600">My projects</p>
+      <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72 mb-10">
+        <p class="pb-6 text-2xl font-semibold text-blue-600">Demo schedule</p>
+        <div class="flex flex-row gap-x-6 items-center justify-center">
+            <div class="w-[35%]">hi</div>
+           
+        </div>
       </div>
     </div>
   );

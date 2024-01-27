@@ -1,7 +1,34 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import { useRouter } from 'next/router';
+
 export default function Login() {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    email: "",
+    password: ""
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem("email", formData.email);
+    if (localStorage.getItem("email") == 'dinamutoni@gmail.com'){
+      localStorage.setItem('role', 'developer')
+      router.push('/dev-dashboard')
+    }else if(localStorage.getItem("email") == 'chrisroberts@gmail.com'){
+      localStorage.setItem('role', 'client')
+      router.push('/client-dashboard')
+    }
+  };
   return (
     <>
       <Navbar />
@@ -58,7 +85,7 @@ export default function Login() {
                   Or
                 </div>
 
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div class="grid gap-y-4">
                     <div>
                       <label for="email" class="block text-sm mb-2 ">
@@ -72,6 +99,7 @@ export default function Login() {
                           class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none "
                           required
                           aria-describedby="email-error"
+                          onChange={handleInputChange}
                         ></input>
                         <div class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3">
                           <svg
@@ -114,6 +142,7 @@ export default function Login() {
                           class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                           required
                           aria-describedby="password-error"
+                          onChange={handleInputChange}
                         ></input>{" "}
                         <div class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3">
                           <svg

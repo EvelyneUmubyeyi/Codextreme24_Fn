@@ -64,7 +64,7 @@ export default function DashboardTransactions() {
         <div class="px-6">
           <a
             class="flex-none text-xl font-semibold"
-            href="#"
+            href="/"
             aria-label="Brand"
           >
             <div class="flex items-center space-x-2">
@@ -192,7 +192,8 @@ export default function DashboardTransactions() {
             </li>
 
             <li class="hs-accordion" id="users-accordion">
-              <button
+              <a
+                href="/dev-dashboard/account"
                 type="button"
                 class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100"
               >
@@ -214,7 +215,7 @@ export default function DashboardTransactions() {
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
                 Account
-              </button>
+              </a>
             </li>
           </ul>{" "}
           <a
@@ -227,9 +228,211 @@ export default function DashboardTransactions() {
         <div class="w-full flex flex-col flex-wrap"></div>
       </div>
       <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:ps-72">
-        <p class="pb-6 text-2xl font-semibold text-blue-600">Demo schedule</p>
-        <div>
-            
+        <p class="pb-6 text-2xl font-semibold text-blue-600">Transaction</p>
+        <div class="w-full flex flex-row flex-wrap justify-center m-auto gap-6 mb-10">
+          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
+              <h3 class="text-lg font-bold text-gray-800">E commerce app</h3>
+              <p className="font-medium text-green-500 text-lg">$45</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">Leslie Alexander</p>
+
+              <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-yellow-100 text-yellow-800 ">
+                Pending
+              </span>
+            </div>
+
+            <a
+              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              href="#"
+            >
+              View
+              <svg
+                class="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
+              <h3 class="text-lg font-bold text-gray-800">Food app</h3>
+              <p className="font-medium text-green-500 text-lg">$45</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">Michael Foster</p>
+              <span class="inline-flex items-center py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-blue-100 text-blue-800">
+                Done
+              </span>
+            </div>
+
+            <a
+              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              href="#"
+            >
+              View
+              <svg
+                class="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
+              <h3 class="text-lg font-bold text-gray-800">
+                Task management app
+              </h3>
+              <p className="font-medium text-green-500 text-lg">$45</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">Dries Vincent</p>
+              <span class="inline-flex items-center py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-blue-100 text-blue-800">
+                Done
+              </span>
+            </div>
+
+            <a
+              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              href="#"
+            >
+              View
+              <svg
+                class="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
+              <h3 class="text-lg font-bold text-gray-800">Fitness app</h3>
+              <p className="font-medium text-green-500 text-lg">$45</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">Lindsay Walton</p>
+
+              <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-yellow-100 text-yellow-800 ">
+                Pending
+              </span>
+            </div>
+            <a
+              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              href="#"
+            >
+              View
+              <svg
+                class="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
+              <h3 class="text-lg font-bold text-gray-800">
+                Task management app
+              </h3>
+              <p className="font-medium text-green-500 text-lg">$45</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">Dries Vincent</p>
+              <span class="inline-flex items-center py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-blue-100 text-blue-800">
+                Done
+              </span>
+            </div>
+
+            <a
+              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              href="#"
+            >
+              View
+              <svg
+                class="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
+          <div class="bg-white flex flex-wrap w-[45%] border rounded-xl shadow-sm px-6 py-4 flex-col h-full sm:px-6">
+            <div class="sm:col-span-9 mb-2 flex justify-between items-center">
+              <h3 class="text-lg font-bold text-gray-800">Fitness app</h3>
+              <p className="font-medium text-green-500 text-lg">$45</p>
+            </div>
+            <div class="flex flex-row justify-between">
+              <p class="mt-1 text-gray-500 mb-4 text-sm ">Lindsay Walton</p>
+
+              <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 mb-1.5 rounded-lg text-xs font-medium bg-red-100 text-red-800 ">
+                Canceled
+              </span>
+            </div>
+            <a
+              class="mt-2 inline-flex items-center gap-x-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              href="#"
+            >
+              View
+              <svg
+                class="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>

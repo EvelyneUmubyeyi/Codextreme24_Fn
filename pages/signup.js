@@ -10,7 +10,7 @@ export default function Signup() {
           <div class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm">
             <div class="p-4 sm:p-7">
               <div class="text-center">
-                <h1 class="block text-2xl font-bold text-gray-800">Sign in</h1>
+                <h1 class="block text-2xl font-bold text-gray-800">Sign up</h1>
                 <p class="mt-2 text-sm text-gray-600 ">
                   Already have an account?
                   <a
@@ -138,7 +138,7 @@ export default function Signup() {
                     <div>
                       <div class="flex justify-between items-center">
                         <label for="password" class="block text-sm mb-2 ">
-                          Password
+                          Confirm Password
                         </label>
                         <a
                           class="text-sm text-blue-600 decoration-2 hover:underline font-medium "
@@ -179,10 +179,25 @@ export default function Signup() {
                     <div class="flex items-center">
                       <div class="flex">
                         <input
+                          id="developer"
+                          name="developer"
+                          type="checkbox"
+                          class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
+                        ></input>
+                      </div>
+                      <div class="ms-3">
+                        <label for="developer" class="text-sm ">
+                          I am a developer
+                        </label>
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="flex">
+                        <input
                           id="remember-me"
                           name="remember-me"
                           type="checkbox"
-                          class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
+                          class="shrink-0 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
                         ></input>
                       </div>
                       <div class="ms-3">
@@ -195,7 +210,7 @@ export default function Signup() {
                       type="submit"
                       class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none "
                     >
-                      Sign in
+                      Sign up
                     </button>
                   </div>
                 </form>

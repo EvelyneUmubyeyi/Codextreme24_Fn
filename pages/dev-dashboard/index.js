@@ -118,7 +118,7 @@ export default function DashboardHome() {
         <div class="px-6">
           <a
             class="flex-none text-xl font-semibold"
-            href="#"
+            href="/"
             aria-label="Brand"
           >
             <div class="flex items-center space-x-2">
